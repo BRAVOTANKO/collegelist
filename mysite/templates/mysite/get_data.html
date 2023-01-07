@@ -1,0 +1,87 @@
+{#我好像是废弃页面#}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>list_data_test</title>
+    <style>
+        .body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            width: 50%;
+            overflow: auto;
+            margin: auto;
+            display: flex;
+            float:right;
+        }
+
+        .content {
+            width: 500px;
+            height: 600px;
+            flex-shrink: 0;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+    </style>
+   </head>
+    <body>
+        <div class="sidenav">
+            <a href="#list">排行榜</a>
+        </div>
+
+        <section>
+            <div class="main">
+                <div id="list" class="content">
+                    <table border="1">
+                        <caption>大学排名</caption>
+                        {% for line in list_data %}
+                        <tr>
+                            {% for i in line %}
+                            <td>{{i}}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </body>
+
+</html>
