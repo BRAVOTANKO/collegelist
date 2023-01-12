@@ -7,6 +7,7 @@ import sys
 
 from mysite.utils.dataget import getdata#引入爬虫功能
 from mysite.utils.gen_wc import gen_wc#引入词云功能
+from mysite.utils.chart1 import bar#引入柱状图
 # Create your views here.
 
 
@@ -43,10 +44,11 @@ def get_data(request):
             list_data.append(ls)
         return render(request,'mysite/get_data.html',{'list_data':list_data})
 
-#直方图
+#柱状图
 def histogram(request):
     if request.method == 'POST':
-        return render(request,'mysite/histogram.html')
+        a = bar()
+        return render(request,'mysite/bar.html')
 
 #词云
 def wordcloud(request):

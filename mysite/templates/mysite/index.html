@@ -163,16 +163,26 @@
 
 
 
+		<script>
+            function myFunction(){
+	               alert("数据爬取成功，已生成数据文件");
+             }
+        </script>
+
 	</head>
+     
 
 
 	<body translate="no">
 		<form action="detail" method="post">{#这里改页面地址要把action也改了#}
 			<div class="btposition">
-				<button type="submit" class="button" style="color: white;">START</button>
+				<button type="submit" class="button"  onclick="myFunction()"  style="color: white;">START</button>
 			</div>
 		</form>
 		<div class="begin">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+            </svg>
 			<div class="title">.北京印刷学院软工实习.</div>
 			<div class="title2">"项目功能."</div>
 			<div class='list'>'参与<div>人员'</div>

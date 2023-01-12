@@ -45,6 +45,9 @@
     <Compile Include="mysite\utils\gen_wc.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="mysite\utils\chart1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mysite\views.py" />
     <Compile Include="mysite\__init__.py" />
   </ItemGroup>
